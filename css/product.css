@@ -1,0 +1,80 @@
+.d-block {
+  height: 450px;
+  width: 100%;
+  object-fit: cover;
+}
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+h3 {
+  text-align: center;
+  margin: 50px 0 30px 0;
+}
+
+.seach-product {
+  margin: 30px auto;
+  background-color: rgb(148, 226, 200);
+  width: 40%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.seach-product input {
+  background-color: rgb(148, 226, 200);
+  border: none;
+  outline: none;
+  width: 70%;
+  padding: 5px;
+}
+.seach-product button {
+  width: 25%;
+  border: none;
+  outline: none;
+  background-color: rgb(191, 88, 88);
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+}
+.banner-product {
+  margin-top: 60px;
+}
+.card-img {
+  position: relative;
+  overflow: hidden;
+}
+.btn-img {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  background-color: rgb(9, 9, 9);
+  
+  position: absolute;
+  width: 100%;
+  transition: 0.25s ease-in-out;
+  bottom: -25px;
+  /* opacity: 0.9; */
+}
+.btn-img a {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.card-img:hover .btn-img {
+  bottom: 0px;
+}
+.card-img:hover {
+  filter: opacity(80%);
+}
+.album-seach {
+  display: flex;
+  grid-template-columns: 1fr, 3fr;
+  margin: 20px 50px;
+  
+}
+.btn-img i{
+  color: rgb(191, 88, 88);
+}

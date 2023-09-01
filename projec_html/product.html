@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>product</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/product.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+   
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><img src="/image/logo.jpg" alt="" /></li>
+        </ul>
+        <ul class="nav-container">
+          <li><a href="/projec_html/index.html">TRANG CHỦ</a></li>
+          <li><a href="/projec_html/product.html"> SẢN PHẨM </a></li>
+          <li><a href="">BỘ SƯU TẬP</a></li>
+          <li><a href="" style="color: rgb(191, 88, 88)">KHUYẾN MÃI</a></li>
+        </ul>
+        <ul class="nav-right">
+          <li>
+            <button>
+              <a href="/projec_html/dangky.html">Đăng ký</a>
+            </button>
+          </li>
+          <li>
+            <button><a href="/projec_html/dangnhap.html">Đăng nhập</a></button>
+          </li>
+          <li><i class="fa-solid fa-cart-shopping"></i></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="banner-product">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="/image/baner-1.jpg" class="d-block" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="/image/banner_4.jpg" class="d-block" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="/image/banner_3.jpg" class="d-block" alt="..." />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <div class="seach-product">
+        <input type="text" name="tim kiếm" id="" placeholder="Tìm sản phẩm" />
+        <button>Seach</button>
+      </div>
+      <h3>Bộ Sưu Tập</h3>
+      <hr />
+      <section class="album-seach">
+        <section>
+          <h2>SẢN PHẨM</h2>
+
+          <h4>Bộ lọc</h4>
+          <hr />
+          <div class="custom-select" style="width: 200px">
+            <p>Giá</p>
+            <input type="checkbox" />0-200000 <br />
+            <input type="checkbox" />200000-400000 <br />
+            <input type="checkbox" />40000-600000 <br />
+            <input type="checkbox" />600000-800000 <br />
+            <input type="checkbox" />800000-1000000 <br /><br />
+
+            <p>Kích thước</p>
+            <input type="checkbox" />S<br />
+            <input type="checkbox" />M <br />
+            <input type="checkbox" />L<br />
+            <input type="checkbox" />XL<br />
+            <input type="checkbox" />XXL<br />
+          </div>
+        </section>
+        <section class="album-product">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col-12 col-sm-4 col-xl-2">
+                <div class="card">
+                  <div class="card-img">
+                    <img
+                      src="/image/anh sản phẩm 6.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="btn-img">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <a href="" class="buy-now">Mua ngay</a>
+                      <i class="fa-regular fa-eye"></i
+                      ><a
+                        href="http://127.0.0.1:5500/projec_html/product_detail.html"
+                        class="view-now"
+                        >xem nhanh</a
+                      >
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Hình sản phẩm</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 col-xl-2">
+                <div class="card">
+                  <div class="card-img">
+                    <img
+                      src="/image/anh sản phẩm 1.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="btn-img">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <a href="" class="buy-now">Mua ngay</a>
+                      <i class="fa-regular fa-eye"></i
+                      ><a
+                        href="http://127.0.0.1:5500/projec_html/product_detail.html"
+                        class="view-now"
+                        >xem nhanh</a
+                      >
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Hình sản phẩm</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 col-xl-2">
+                <div class="card">
+                  <div class="card-img">
+                    <img
+                      src="/image/anh sản phẩm 2.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="btn-img">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <a href="" class="buy-now">Mua ngay</a>
+                      <i class="fa-regular fa-eye"></i
+                      ><a
+                        href="http://127.0.0.1:5500/projec_html/product_detail.html"
+                        class="view-now"
+                        >xem nhanh</a
+                      >
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Hình sản phẩm</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 col-xl-2">
+                <div class="card">
+                  <div class="card-img">
+                    <img
+                      src="/image/anh sản phẩm 3.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="btn-img">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <a href="" class="buy-now">Mua ngay</a>
+                      <i class="fa-regular fa-eye"></i
+                      ><a
+                        href="http://127.0.0.1:5500/projec_html/product_detail.html"
+                        class="view-now"
+                        >xem nhanh</a
+                      >
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Hình sản phẩm</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 col-xl-2">
+                <div class="card">
+                  <div class="card-img">
+                    <img
+                      src="/image/anh sản phẩm 4.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="btn-img">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <a href="" class="buy-now">Mua ngay</a>
+                      <i class="fa-regular fa-eye"></i
+                      ><a
+                        href="http://127.0.0.1:5500/projec_html/product_detail.html"
+                        class="view-now"
+                        >xem nhanh</a
+                      >
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Hình sản phẩm</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 col-xl-2">
+                <div class="card">
+                  <div class="card-img">
+                    <img
+                      src="/image/anh sản phẩm 5.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="btn-img">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <a href="" class="buy-now">Mua ngay</a>
+                      <i class="fa-regular fa-eye"></i
+                      ><a
+                        href="http://127.0.0.1:5500/projec_html/product_detail.html"
+                        class="view-now"
+                        >xem nhanh</a
+                      >
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Hình sản phẩm</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 col-xl-2">
+                <div class="card">
+                  <div class="card-img">
+                    <img
+                      src="/image/anh sản phẩm 8.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="btn-img">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <a href="" class="buy-now">Mua ngay</a>
+                      <i class="fa-regular fa-eye"></i
+                      ><a
+                        href="http://127.0.0.1:5500/projec_html/product_detail.html"
+                        class="view-now"
+                        >xem nhanh</a
+                      >
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Hình sản phẩm</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 col-xl-2">
+                <div class="card">
+                  <div class="card-img">
+                    <img
+                      src="/image/anh sản phẩm 6.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="btn-img">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <a href="" class="buy-now">Mua ngay</a>
+                      <i class="fa-regular fa-eye"></i
+                      ><a
+                        href="http://127.0.0.1:5500/projec_html/product_detail.html"
+                        class="view-now"
+                        >xem nhanh</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Hình sản phẩm</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 col-xl-2">
+                <div class="card">
+                  <div class="card-img">
+                    <img
+                      src="/image/anh sản phẩm 3.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="btn-img">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <a href="" class="buy-now">Mua ngay</a>
+                      <i class="fa-regular fa-eye"></i
+                      ><a
+                        href="http://127.0.0.1:5500/projec_html/product_detail.html"
+                        class="view-now"
+                        >xem nhanh</a
+                      >
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Hình sản phẩm</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">our services</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#">affiliate program</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">shipping</a></li>
+              <li><a href="#">returns</a></li>
+              <li><a href="#">order status</a></li>
+              <li><a href="#">payment options</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="https://www.facebook.com/thusuong.1302"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <div>
+              <iframe
+                id="maps-shop"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15338.561926949256!2d108.2038231!3d16.0322201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1693217574068!5m2!1svi!2s"
+                width="250px"
+                height="250px"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"
+  ></script>
+</html>
