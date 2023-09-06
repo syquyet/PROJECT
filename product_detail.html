@@ -29,22 +29,28 @@
     <style>
       .product_detail-container {
         display: flex;
+        border: 1px solid rgb(198, 170, 170);
+        margin: 50px ;
+        box-shadow: 1px 2px 4px rgb(186, 112, 78);
+       
       }
-     
-      
       .product_detail-banner {
         width: 40%;
-        margin: 100px 50px;
+        margin: 20px;
       }
       .product_detail-content {
         margin-top: 100px;
-        width:40%;
+        width:44%;
         height: 100%;
       }
       .btn-size button {
         margin: 0 5px;
         width: 40px;
         border: 1px solid rgb(73, 66, 66);
+      }
+      .btn-size button:hover{
+        border: 1px solid rgb(208, 73, 73);
+        background-color: rgb(208, 73, 73);
       }
       .btn-quantity button {
         width: 40px;
@@ -72,6 +78,9 @@
         width: 35%;
         border: 1px solid rgb(150, 134, 134);
       }
+      .product_detail-btn-buynow:hover{
+        background-color: rgb(60, 127, 203);
+      }
       .btn-add-product_detail {
         width: 35%;
         border: 1px solid rgb(172, 163, 163);
@@ -83,7 +92,10 @@
       .product_detail-btn-delete {
         border: 1px solid rgb(150, 134, 134);
         width: 40px;
-        background-color: brown;
+        background-color: rgb(165, 68, 68);
+      }
+      .product_detail-btn-delete:hover{
+        background-color: brown
       }
       .product_detail-content h5{
         color: rgb(139, 166, 187);
@@ -94,7 +106,7 @@
     <header>
       <nav>
         <ul>
-          <li><img src="/image/logo.jpg" alt="" /></li>
+          <li class="logo-content"><img src="/image/logo.jpg" alt="" /><big>SUONGG STORE</big></li>
         </ul>
         <ul class="nav-container">
           <li><a href="/projec_html/index.html">TRANG CHỦ</a></li>
@@ -111,7 +123,7 @@
           <li>
             <button><a href="/projec_html/dangnhap.html">Đăng nhập</a></button>
           </li>
-          <li><i class="fa-solid fa-product_detail-shopping"></i></li>
+          <li><i class="fa-solid fa-cart-shopping"></i></li>
         </ul>
       </nav>
     </header>
@@ -205,7 +217,7 @@
           </div>
 
           <div>
-            <button class="btn-add-product_detail">Thêm vào giỏ hàng</button>
+           <a href="http://127.0.0.1:5500/projec_html/cart.html"><button class="btn-add-product_detail">Thêm vào giỏ hàng</button></a> 
             <button class="product_detail-btn-buynow">Mua ngay</button>
             <button class="product_detail-btn-delete">xóa</button>
           </div>
@@ -223,26 +235,15 @@
       <div class="container">
         <div class="row">
           <div class="footer-col">
-            <h4>company</h4>
+            <h4>Sươngg store</h4>
             <ul>
-              <li><a href="#">about us</a></li>
-              <li><a href="#">our services</a></li>
-              <li><a href="#">privacy policy</a></li>
-              <li><a href="#">affiliate program</a></li>
+              <li>Địa chỉ:42-Phạm Ngọc Thạch, TP.Vinh,Việt Nam.</li>
+              <li>Hot line: 0888999888</li>
             </ul>
           </div>
+         
           <div class="footer-col">
-            <h4>get help</h4>
-            <ul>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">shipping</a></li>
-              <li><a href="#">returns</a></li>
-              <li><a href="#">order status</a></li>
-              <li><a href="#">payment options</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>follow us</h4>
+            <h4>Theo dõi</h4>
             <div class="social-links">
               <a href="https://www.facebook.com/thusuong.1302"
                 ><i class="fab fa-facebook-f"></i
@@ -256,7 +257,7 @@
               <iframe
                 id="maps-shop"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15338.561926949256!2d108.2038231!3d16.0322201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1693217574068!5m2!1svi!2s"
-                width="250px"
+                width="500px"
                 height="250px"
                 style="border: 0"
                 allowfullscreen=""

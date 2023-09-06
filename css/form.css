@@ -14,8 +14,8 @@ form {
 }
 
 form * {
-  padding: 10px;
-  margin: 10px 20px;
+  padding: 5px;
+  margin: 5px 20px;
 }
 form input {
   border-radius: 10px;
@@ -31,7 +31,7 @@ form button:hover {
 form button {
   width: 30%;
   background-color: rgb(191, 88, 88);
-
+font-size: 16px;
   border-radius: 20px;
   border: hidden;
   transition: 0.25s;
@@ -50,9 +50,11 @@ form h2 {
   padding-bottom: 40px;
   margin-bottom: 0;
   color: white;
+  
 }
 form hr {
   padding: 0;
+  color: white;
 }
 .error {
   color: rgb(191, 88, 88);
@@ -69,4 +71,7 @@ color: white;
 form a{
   text-decoration: none;
   color:rgb(191, 88, 88); ;
+}
+header{
+  padding: 0 30px;
 }

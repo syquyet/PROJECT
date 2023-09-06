@@ -89,5 +89,5 @@ function readerError(error) {
   errorPasswordElement.textContent = error.msgPassword;
 }
 function dieuhuong_home(){
-    window.location.href="http://127.0.0.1:5500/projec_html/index.html";
+    window.location.href="http://127.0.0.1:5500/projec_html/accout_user/account_user.html";
 }

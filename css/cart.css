@@ -1,0 +1,106 @@
+main {
+  height: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.cart-table-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.cart-table-content table tr {
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+.cart-table-content table tr {
+  border-bottom: 1px solid rgb(67, 58, 58);
+}
+.cart-table-content a {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.btn-size button {
+  margin: 0 5px;
+  width: 40px;
+  border: 1px solid rgb(73, 66, 66);
+}
+.btn-quantity button {
+  width: 40px;
+  border: 1px solid rgb(73, 66, 66);
+  border: none;
+}
+.btn-quantity .btn-quantity-reduce:hover {
+  background-color: rgb(192, 203, 203);
+  transition: 0.2s ease-in-out;
+}
+.btn-quantity .btn-quantity-add:hover {
+  background-color: rgb(192, 203, 203);
+  transition: 0.2s ease-in-out;
+}
+.btn-quantity span {
+  padding: 0 20px;
+}
+.btn-quantity {
+  border: 1px solid rgb(150, 134, 134);
+  width: 100%;
+}
+.cart-container {
+  display: flex;
+  gap: 50px;
+  width: 90%;
+  margin: 0 30px;
+}
+tr {
+  border-bottom: 1px solid black;
+}
+td {
+  padding: 10px 10px;
+}
+.back-product {
+  margin: 30px 10px;
+  padding: 0 10px;
+  border: none;
+  background-color: rgb(191, 88, 88);
+  color: white;
+}
+
+.payment-now {
+  margin-top: 20px;
+  border: none;
+  background-color: rgb(191, 88, 88);
+  width: 100%;
+  color: white;
+}
+.payment table {
+  width: 400px;
+}
+.payment table tr td {
+  width: 100%;
+}
+.cart-list_product a {
+  text-decoration: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgb(204, 185, 185);
+  text-align: center;
+  color: rgb(204, 185, 185);
+}
+.cart-list_product a:hover {
+  border: 1px solid rgb(88, 70, 70);
+  color: rgb(88, 70, 70);
+}
+.cart-list_product {
+  border: 1px solid rgb(173, 198, 198);
+  border-radius: 5px;
+  padding: 20px 30px;
+  box-shadow: 1px 2px 4px rgb(186, 112, 78);
+}
+.payment {
+  border: 1px solid rgb(173, 198, 198);
+  border-radius: 5px;
+  padding: 20px 30px;
+  box-shadow: 1px 2px 4px rgb(186, 112, 78);
+}

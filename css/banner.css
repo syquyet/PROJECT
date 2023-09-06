@@ -7,6 +7,8 @@
     background-repeat: no-repeat;
     position: relative;
     margin-top:60px;
+    box-shadow: 2px 3px 8px 0 rgb(185, 59, 59)
+    
    
   
 }
@@ -18,3 +20,27 @@
     object-fit: cover;
    
 }
+.banner-buttom-home img {
+    width: 400px;
+    height: 300px;
+  }
+  .banner-buttom-home {
+    padding: 50px;
+    margin: 50px 0;
+    background-color: rgb(166, 128, 58);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  .banner-buttom-home h1 {
+    text-align: center;
+  }
+ .banner-content{
+    position: absolute;
+    top: 230px;
+    left: 70px;
+    color: rgb(191, 88, 88);
+    font-family: 'Yeseva One', cursive;
+ }
+ .banner-content p{
+    padding: 0;
+    margin: 0;
+ }

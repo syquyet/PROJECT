@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>product_detail</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/product.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <style>
+      .pay-container {
+        margin: 100px 0;
+        padding: 0 100px;
+
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+      }
+      .pay-container p {
+        margin: 5px 0;
+      }
+      .pay-address * {
+        width: 90%;
+        outline: none;
+        
+        
+      }
+      .pay-product table {
+        width: 100%;
+      }
+      .pay-product table tr {
+        border-bottom: 1px solid rgb(158, 135, 135);
+      }
+      .pay-product table tr td {
+        padding: 5px 0;
+      }
+
+      .pay-product {
+        border: 1px solid rgb(170, 141, 141);
+        padding: 10px;
+        background-color: rgb(207, 236, 236);
+        box-shadow: 1px 2px 4px rgb(186, 112, 78);
+        border-radius: 5px;
+      }
+      .pay-address-city {
+        display: flex;
+      }
+      .pay-product button {
+        margin: 20px;
+        padding: 2px 5px;
+        border-radius: 5px;
+        border: none;
+        background-color: rgb(190, 62, 62);
+        color: white;
+      }
+      .pay-product-btn {
+        text-align: center;
+      }
+      .pay-table-content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="logo-content">
+            <img src="/image/logo.jpg" alt="" /><big>SUONGG STORE</big>
+          </li>
+        </ul>
+        <ul class="nav-container">
+          <li><a href="/projec_html/index.html">TRANG CHỦ</a></li>
+          <li><a href="/projec_html/product.html"> SẢN PHẨM </a></li>
+          <li><a href="">BỘ SƯU TẬP</a></li>
+          <li><a href="" style="color: rgb(191, 88, 88)">KHUYẾN MÃI</a></li>
+        </ul>
+        <ul class="nav-right">
+          <li>
+            <button>
+              <a href="/projec_html/dangky.html">Đăng ký</a>
+            </button>
+          </li>
+          <li>
+            <button><a href="/projec_html/dangnhap.html">Đăng nhập</a></button>
+          </li>
+          <li><i class="fa-solid fa-cart-shopping"></i></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="pay-container">
+        <section class="pay-address">
+          <h6>THÔNG TIN THANH TOÁN</h6>
+          <p>Họ và tên:</p>
+          <input type="text" placeholder="Họ và tên" />
+          <p>Số điện thoại:</p>
+          <input type="number" placeholder="Số điện thoại" />
+          <p>Email:</p>
+          <input type="email" placeholder="Email" />
+          <div class="pay-address-city">
+            <div>
+              <p>Tỉnh/Thành phố</p>
+              <select name="Tỉnh/Thành phố" id="">
+                <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                <option value="Hà Nội">Hà Nội</option>
+                <option value="Đà Nẵng">Đà Nẵng</option>
+                <option value="Hải Phòng">Hải Phòng</option>
+                <option value="Vinh">Vinh</option>
+                <option value="Huế">Huế</option>
+                <option value="Cần Thơ">Cần Thơ</option>
+              </select>
+            </div>
+            <div>
+              <p>Quận/Huyện</p>
+              <select name="Quận/Huyện" id="">
+                <option value="Quận 1">Quận 1</option>
+                <option value="Quận 2">Quận 2</option>
+                <option value="Quận 3">Quận 3</option>
+                <option value="Quận 4">Quận 4</option>
+                <option value="Quận 5">Quận 5</option>
+                <option value="Quận 6">Quận 6</option>
+                <option value="Quận 7">Quận 7</option>
+                <option value="Quận 8">Quận 8</option>
+              </select>
+            </div>
+            <div>
+              <p>Phường/Xã</p>
+              <select name="Phường/Xã" id="">
+                <option value="Phường 1">Phường 1</option>
+                <option value="Phường 2">Phường 2</option>
+                <option value="Phường 3">Phường 3</option>
+                <option value="Phường 4">Phường 4</option>
+                <option value="Phường 5">Phường 5</option>
+                <option value="Phường 6">Phường 6</option>
+                <option value="Phường 7">Phường 7</option>
+                <option value="Phường 8">Phường 8</option>
+              </select>
+            </div>
+          </div>
+          <p>Địa chỉ:</p>
+          <input type="text" placeholder="Ví dụ: Số 20, ngõ 90" />
+          <h6>THÔNG TIN BỔ SUNG</h6>
+          <p>Ghi chú đơn hàng(tùy chọn)</p>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="2"
+            placeholder="ghí chú về đơn hàng, hay địa điiểm giao hàng chi tiết hơn"
+          ></textarea>
+        </section>
+        <section class="pay-product">
+          <h6>ĐƠN HÀNG CỦA BẠN</h6>
+          <table>
+            <tr>
+              <th>SẢN PHẨM</th>
+              <th>TẠM TÍNH</th>
+            </tr>
+            <tr>
+              <td class="pay-table-content">
+                <img
+                  src="/image/anh sản phẩm 8.jpg"
+                  alt=""
+                  width="100px"
+                  height="100px"
+                />
+                <div>x <span>1</span></div>
+                <div>
+                  <h6>Tên sản phẩm</h6>
+                  <p>sze: S</p>
+                </div>
+              </td>
+              <td>100,000đ</td>
+            </tr>
+            <tr>
+              <td>TẠM TÍNH</td>
+              <td>100,000đ</td>
+            </tr>
+            <tr>
+              <td>TỔNG</td>
+              <td>100,000đ</td>
+            </tr>
+          </table>
+          <div class="pay-product-btn"><button>ĐẶT HÀNG</button></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Sươngg store</h4>
+            <ul>
+              <li>Địa chỉ:42-Phạm Ngọc Thạch, TP.Vinh,Việt Nam.</li>
+              <li>Hot line: 0888999888</li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Theo dõi</h4>
+            <div class="social-links">
+              <a href="https://www.facebook.com/thusuong.1302"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <div>
+              <iframe
+                id="maps-shop"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15338.561926949256!2d108.2038231!3d16.0322201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1693217574068!5m2!1svi!2s"
+                width="500px"
+                height="250px"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
