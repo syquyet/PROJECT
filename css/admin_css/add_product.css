@@ -1,0 +1,35 @@
+.form-add-product form{
+    width: 400px;
+    margin: 100px auto;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 50px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 2px 4px rgb(186, 112, 78);
+}
+.form-add-product input{
+    width: 100%;
+    border-radius: 5px;
+   border: 1px solid rgb(182, 135, 135);
+    outline: none;
+    padding: 0 5px;
+    
+}
+.form-add-product textarea{
+    border: 1px solid rgb(182, 135, 135); 
+    outline: none;
+    padding: 5px;
+}
+.form-add-product button{
+    width: 20%;
+    background-color: blueviolet;
+    border: 1px solid rgb(182, 135, 135);
+    color: white;
+    border-radius: 5px;
+    margin-left: 30px;
+}
+.form-add-product .btn-delete{
+    background-color: rgb(219, 57, 57);
+    margin-left: 40%;
+    
+}

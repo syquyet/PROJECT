@@ -1,4 +1,4 @@
-const userLogins = [];
+// const userLogins = [];
 
 const formElement = document.querySelector("form");
 const emailElement = document.querySelector("#email");
@@ -17,9 +17,9 @@ formElement.addEventListener("submit", (e) => {
   }
   // B3 tải userlogin từ local
 
-  const accountsDB = JSON.parse(localStorage.getItem("accounts")) || [];
+  const accountsDB = JSON.parse(localStorage.getItem("accounts")) ||[];
   console.log("222222", accountsDB);
-  const userLoginsDB = JSON.parse(localStorage.getItem("userLogins"))||[];
+  const userLoginsDB = JSON.parse(localStorage.getItem("userLogins"))||{} ;
   console.log("1111111", userLoginsDB);
 
   let isExist = false;
@@ -34,19 +34,19 @@ formElement.addEventListener("submit", (e) => {
 
   if (isExist) {
     let isLogin = false;
-    for (const userLogin of userLoginsDB) {
-      if (userLogin.email === user.email) {
+    
+      if (userLoginsDB.email === user.email) {
         isLogin = true;
-        break;
+       
       }
-    }
+    
     if (!isLogin) {
       delete user.password;
-      userLoginsDB.push(user);
-      localStorage.setItem("userLogins", JSON.stringify(userLoginsDB));
-      
-      dieuhuong_home();
-      return;
+      // userLoginsDB.push(user);
+      localStorage.setItem("userLogin", JSON.stringify(user));
+
+      navigation("/");
+       return;
     } else {
       error.isError = true;
       error.msgEmail = "*Tài khoản đã tồn tại vui lòng đăng nhập lại";
@@ -88,6 +88,7 @@ function readerError(error) {
   errorEmailElement.textContent = error.msgEmail;
   errorPasswordElement.textContent = error.msgPassword;
 }
-function dieuhuong_home(){
-    window.location.href="http://127.0.0.1:5500/projec_html/accout_user/account_user.html";
-}
+
+  
+   
+

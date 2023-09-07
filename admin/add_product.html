@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manage_users</title>
+    <title>add_product</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -28,65 +28,13 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Work+Sans:wght@500&family=Yeseva+One&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/header.css" />
-    <link rel="stylesheet" href="/css/sidenav.css" />
-    <link rel="stylesheet" href="/css/footer.css" />
-    <style>
-      main {
-        padding-top: 100px;
-        width: 60%;
-        margin: 0 auto;
-      }
-      .manage_users-input input {
-        width: 87%;
-        border: none;
-        background-color: rgb(232, 241, 241);
-        border-radius: 5px 0 0 5px;
-        outline: none;
-      }
-      .manage_users-input button {
-        width: 13%;
-        border: none;
-        background-color: rgb(191, 88, 88);
-        color: white;
-        border-radius: 0 5px 5px 0;
-        object-fit: none;
-        padding: 0 3px;
-      }
-      .list-users {
-        width: 100%;
-       
-        margin-top: 30px;
-        margin-bottom: 30px;
-        background-color: rgb(232, 241, 241);
-        text-align: center;
-      }
 
-      .list-users th {
-        background-color: blueviolet;
-        color: white;
-      }
-      .list-users button {
-        width: 80%;
-        border: none;
-        background-color: rgb(191, 88, 88);
-        border-radius: 5px;
-        color: white;
-      }
-      .list-users tr {
-        border-bottom: 1px solid rgb(189, 220, 220);
-      }
-      .list-users tr td {
-        padding: 5px 0;
-      }
-      .manage-user{
-        border: 1px solid rgb(173, 198, 198);
-        padding: 20px;
-        margin-bottom: 50px;
-        box-shadow: 1px 2px 4px rgb(186, 112, 78);
-        border-radius: 5px;
-      }
-    </style>
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/admin_css/add_product.css" />
+    <link rel="stylesheet" href="/css/sidenav.css" />
+
+    <style></style>
   </head>
   <body>
     <header>
@@ -122,11 +70,13 @@
                   <i class="fa-solid fa-list"></i><a href="#">Dashboard</a>
                 </div>
                 <div><i class="fa-solid fa-users"></i><a href="">User</a></div>
-                <div><i class="fa-solid fa-shirt"></i>   <a href="">Product</a></div>
+                <div>
+                  <i class="fa-solid fa-shirt"></i> <a href="">Product</a>
+                </div>
                 <div>
                   <i class="fa-solid fa-file-invoice"></i><a href="">Order</a>
                 </div>
-               
+
                 <div>
                   <i class="fa-solid fa-right-from-bracket"></i>
                   <a href="#">Log out</a>
@@ -134,7 +84,11 @@
               </div>
             </div>
           </li>
-          <li class="logo-content"><img src="/image/logo.jpg" alt="" onclick="openNav()" /><big>SUONGG STORE</big></li>
+          <li class="logo-content">
+            <img src="/image/logo.jpg" alt="" onclick="openNav()" /><big
+              >SUONGG STORE</big
+            >
+          </li>
         </ul>
 
         <ul class="nav-container">
@@ -143,7 +97,7 @@
           <li><a href="">BỘ SƯU TẬP</a></li>
           <li><a href="" style="color: rgb(191, 88, 88)">KHUYẾN MÃI</a></li>
         </ul>
-        <ul class="nav-right">
+        <ul id="nav-right">
           <li>
             <button>
               <a href="/projec_html/dangky.html">Đăng ký</a>
@@ -161,44 +115,29 @@
       </nav>
     </header>
     <main>
-      <div class="manage-user">
-        <h5>QUẢN LÝ NGƯỜI DÙNG</h5>
-        <div class="manage_users-input">
-          <input type="text" placeholder="Nhập từ khóa" /><button>
-            Tìm kiếm
-          </button>
-        </div>
-        <table class="list-users">
-          <tr>
-            <th>Tên người dùng</th>
-            <th>Email</th>
-            <th>Vai trò</th>
-            <th>Trạng thái</th>
+      <div class="form-add-product">
+        <form>
+          <h2>Thêm sản phẩm</h2>
+          <hr />
 
-            <th>Hành động</th>
-          </tr>
-          <tr>
-            <td>Nguyễn Văn A</td>
-            <td>nguyenvana@gmail.com</td>
-            <td>Khách hàng</td>
-            <td>Active</td>
-            <td><button>Sửa</button></td>
-          </tr>
-          <tr>
-            <td>Nguyễn Văn A</td>
-            <td>nguyenvana@gmail.com</td>
-            <td>Khách hàng</td>
-            <td>Active</td>
-            <td><button>Sửa</button></td>
-          </tr>
-          <tr>
-            <td>Nguyễn Văn A</td>
-            <td>nguyenvana@gmail.com</td>
-            <td>Khách hàng</td>
-            <td>Active</td>
-            <td><button>Sửa</button></td>
-          </tr>
-        </table>
+          <label for="">Mã sản phẩm: </label>
+          <input type="text" />
+          <p></p>
+          <label for="">Tên sản phẩm:</label>
+          <input type="text" />
+          <p></p>
+          <label for="">Mô tả:</label><br />
+          <textarea name="" id="" cols="35%" rows="2px"></textarea>
+          <p></p>
+          <label for="">Đơn giá:</label>
+          <input type="number" />
+          <label for="">Hình ảnh:</label>
+          <input type="text" />
+          <p></p>
+          <div>
+            <button>Lưu</button> <button class="btn-delete">Hủy</button>
+          </div>
+        </form>
       </div>
     </main>
     <footer class="footer">
@@ -211,6 +150,7 @@
               <li>Hot line: 0888999888</li>
             </ul>
           </div>
+
           <div class="footer-col">
             <h4>Theo dõi</h4>
             <div class="social-links">

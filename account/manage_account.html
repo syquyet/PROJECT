@@ -82,18 +82,19 @@
           <li><a href="">BỘ SƯU TẬP</a></li>
           <li><a href="" style="color: rgb(191, 88, 88)">KHUYẾN MÃI</a></li>
         </ul>
-        <ul class="nav-right">
-          <li><i class="fa-solid fa-cart-shopping"></i></li>
-
+        <ul id="nav-right">
           <li>
-            <a id="account_user" href=""
-              >Nguyễn Văn B
-              <img id="img-account" src="/image/anh sản phẩm 6.jpg" alt=""
-            /></a>
+            <button>
+              <a href="http://127.0.0.1:5500/regisert.html">Đăng ký</a>
+            </button>
           </li>
-
           <li>
-            <button><a href="">Đăng xuất</a></button>
+            <button>
+              <a href="http://127.0.0.1:5500/login.html">Đăng nhập</a>
+            </button>
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
           </li>
         </ul>
       </nav>
@@ -106,25 +107,25 @@
 
           <div>
             <label for="">Tên khách hàng:</label><br />
-            <input type="text" />
+            <input id="input-name" type="text" />
           </div>
           <div>
             <label for="">Email:</label><br />
-            <input type="email" />
+            <input id="input-email" type="email" />
           </div>
           <div>
             <label for="">Số điện thoại:</label><br />
-            <input type="number" />
+            <input id="input-phone" type="number" />
           </div>
           <div>
             <label for="">Mật khẩu: </label><br />
-            <input type="text" />
+            <input id="input-password" type="text" />
           </div>
 
           <div class="account-btn">
             <div>
-              <button class="account-btn-edit">edit</button>
-              <button class="account-btn-delete">delete</button>
+              <button class="account-btn-edit" onclick="handleEdit()" >edit</button>
+              <button class="account-btn-delete" onclick="handleDelete() " type="button">delete</button>
             </div>
 
             <div>
@@ -174,4 +175,8 @@
       </div>
     </footer>
   </body>
+  <script src="/utils/method.js"></script>
+  <script src="/utils/header.js"></script>
+  <script src="/utils/database.js"></script>
+  <script src="/JS/edit_user.js"></script>
 </html>

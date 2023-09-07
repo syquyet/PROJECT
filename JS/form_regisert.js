@@ -5,6 +5,7 @@ const fullNameElement = document.querySelector("#fullname");
 const emailElement = document.querySelector("#email");
 const passwordElement = document.querySelector("#password");
 const repeatPasswordElement = document.querySelector("#repeat-password");
+const phoneElement = document.querySelector("#phone");
 // chặn gủi form lên url
 formElement.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -35,13 +36,12 @@ formElement.addEventListener("submit", (e) => {
     delete user.repeatPassword;
     accountsDB.push(user);
     localStorage.setItem("accounts", JSON.stringify(accountsDB));
-    dieuhuong_dangnhap();
-
+    navigation("/login.html");
   } else {
     error.isError = true;
     error.msgEmail =
       "*email đã tồn tại vui lòng đăng nhập hoặc đăng ký email mới";
-      readerError(error);
+    readerError(error);
   }
 });
 // hàm lấy user tử form
@@ -49,6 +49,7 @@ function getUser() {
   return {
     name: fullNameElement.value,
     email: emailElement.value,
+    phone: phoneElement.value,
     password: passwordElement.value,
     repeatPassword: repeatPasswordElement.value,
   };
@@ -59,6 +60,7 @@ function checkError(user) {
     isError: false,
     msgName: "",
     msgEmail: "",
+    msgPhone: "",
     msgPassword: "",
     msgRepeatPassword: "",
   };
@@ -71,9 +73,23 @@ function checkError(user) {
     error.isError = true;
     error.msgEmail = "*nhập đúng định dạng email";
   }
+  if (!user.phone) {
+    error.isError = true;
+    error.msgPhone = "*số điện thoại ko đc để trống";
+    
+  }
+  const vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+  if(vnf_regex.test(user.phone) == false){
+    error.isError = true;
+    error.msgPhone = "*Định dạng số đt sai, vui lòng nhập lại";
+  }
   if (!user.password) {
     error.isError = true;
     error.msgPassword = "*mật khẩu không đc để trống";
+  }
+  if(user.password.length<8){
+    error.isError = true;
+    error.msgPassword = "*mật khẩu 8 ký tự trowe lên";
   }
   if (user.password !== user.repeatPassword) {
     error.isError = true;
@@ -89,11 +105,10 @@ function readerError(error) {
   const errorRepeatPassworddlElememt = document.querySelector(
     "#error-repeat-password"
   );
+  const errorPhoneElement = document.querySelector("#error-phone");
   errorNamelElememt.textContent = error.msgName;
   errorEmailElememt.textContent = error.msgEmail;
+  errorPhoneElement.textContent = error.msgPhone;
   errorPaswordlElememt.textContent = error.msgPassword;
   errorRepeatPassworddlElememt.textContent = error.msgRepeatPassword;
-}
-function dieuhuong_dangnhap(){
-    window.location.href="http://127.0.0.1:5500/projec_html/dangnhap.html";
 }

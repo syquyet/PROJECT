@@ -28,9 +28,7 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Work+Sans:wght@500&family=Yeseva+One&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="/css/header.css" />
-
     <link rel="stylesheet" href="/css/form.css" />
     <link rel="stylesheet" href="/css/footer.css" />
   </head>
@@ -48,7 +46,7 @@
           <li><a href="">BỘ SƯU TẬP</a></li>
           <li><a href="" style="color: rgb(191, 88, 88)">KHUYẾN MÃI</a></li>
         </ul>
-        <ul class="nav-right">
+        <ul id="nav-right">
           <li>
             <button><a href="/projec_html/dangky.html">Đăng ký</a></button>
           </li>
@@ -64,13 +62,15 @@
         <form>
           <h2>Đăng ký thành viên</h2>
           <hr />
-
           <label for="text">Họ và tên: </label>
           <input id="fullname" type="text" placeholder="Họ và tên" />
           <p class="error" id="error-fullname"></p>
           <label for="email">Email:</label>
           <input id="email" type="email" placeholder="Email" />
           <p class="error" id="error-email"></p>
+          <label for="phone">Số điện thoại:</label>
+          <input id="phone" type="number" placeholder="Số điện thoại">
+          <p class="error" id="error-phone"></p>
           <label for="password">Mật khẩu:</label>
           <input id="password" type="password" placeholder="Mật khẩu" />
           <p class="error" id="error-password"></p>
@@ -82,10 +82,9 @@
           />
           <p class="error" id="error-repeat-password"></p>
           <div id="btn-form-login"><button>Đăng ký</button></div>
-
           <p id="navigation">
             Bạn đã dăng ký tài khoản?
-            <a href="/projec_html/dangnhap.html">Đăng nhập</a>
+            <a href="http://127.0.0.1:5500/login.html">Đăng nhập</a>
           </p>
         </form>
       </div>
@@ -129,5 +128,6 @@
       </div>
     </footer>
   </body>
-  <script src="/JS/form_dangky.js"></script>
+  <script src="/utils/method.js"></script>
+  <script src="/JS/form_regisert.js"></script>
 </html>

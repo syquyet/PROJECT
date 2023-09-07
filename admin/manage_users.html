@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manage_product</title>
+    <title>Manage_users</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -30,87 +30,10 @@
     />
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/sidenav.css" />
+    <link rel="stylesheet" href="/css/admin_css/users.css">
     <link rel="stylesheet" href="/css/footer.css" />
     <style>
-      main {
-        padding-top: 100px;
-        width: 60%;
-        margin: 0 auto;
-      }
-      .manage_users-input input {
-        width: 70%;
-        border: none;
-        background-color: rgb(232, 241, 241);
-        border-radius: 5px 0 0 5px;
-        outline: none;
-      }
-      .manage_users-input button {
-        width: 15%;
-        border: none;
-        background-color: rgb(208, 60, 60);
-        color: white;
-        border-radius: 0 5px 5px 0;
-        object-fit: none;
-        padding: 0 3px;
-      }
-      .list-users {
-        width: 100%;
-        
-        margin-top: 30px;
-        margin-bottom: 30px;
-        background-color: rgb(232, 241, 241);
-        text-align: center;
-      }
-
-      .list-users th {
-        background-color: blueviolet;
-        color: white;
-      }
-      .list-users .btn-delete {
-        width: 20%;
-        border: none;
-        background-color: rgb(208, 60, 60);
-        border-radius: 5px;
-        color: white;
-        margin-right: 5px;
-      }
-      .list-users tr {
-        border-bottom: 1px solid rgb(189, 220, 220);
-      }
-      .list-users tr td {
-        padding: 5px 0;
-      }
-      .list-users .btn-edit {
-        width: 20%;
-        border: none;
-        background-color: blueviolet;
-        border-radius: 5px;
-        color: white;
-        margin-right: 5px;
-      }
-      .list-users .btn-detail {
-        width: 45%;
-        border: none;
-        background-color: rgb(191, 88, 88);
-        border-radius: 5px;
-        color: white;
-        margin-right: 5px;
-      }
-      .manage_users-input .btn-add {
-        width: 13%;
-        border: none;
-        background-color: rgb(191, 88, 88);
-        color: white;
-        border-radius: 5px;
-        padding: 0 3px;
-      }
-      .manage-product{
-        border: 1px solid rgb(173, 198, 198);
-        padding: 20px;
-        margin-bottom: 50px;
-        box-shadow: 1px 2px 4px rgb(186, 112, 78);
-        border-radius: 5px;
-      }
+      
     </style>
   </head>
   <body>
@@ -168,7 +91,7 @@
           <li><a href="">BỘ SƯU TẬP</a></li>
           <li><a href="" style="color: rgb(191, 88, 88)">KHUYẾN MÃI</a></li>
         </ul>
-        <ul class="nav-right">
+        <ul id="nav-right">
           <li>
             <button>
               <a href="/projec_html/dangky.html">Đăng ký</a>
@@ -186,76 +109,42 @@
       </nav>
     </header>
     <main>
-      <div class="manage-product">
-        <h5>QUẢN LÝ SẢN PHẨM</h5>
+      <div class="manage-user">
+        <h5>QUẢN LÝ NGƯỜI DÙNG</h5>
         <div class="manage_users-input">
           <input type="text" placeholder="Nhập từ khóa" /><button>
             Tìm kiếm
           </button>
-          <button class="btn-add">Thêm</button>
         </div>
         <table class="list-users">
           <tr>
-            <th>ID</th>
-            <th>Tên sản phẩm</th>
-            <th>Size</th>
-
-            <th>Giá</th>
-            <th>Số lượng</th>
+            <th>Tên người dùng</th>
+            <th>Email</th>
+            <th>Vai trò</th>
+            <th>Trạng thái</th>
 
             <th>Hành động</th>
           </tr>
           <tr>
-            <td>SP_01</td>
-            <td>Váy chân dài</td>
-            <td>S</td>
-
-            <td>100,000đ</td>
-            <td>20</td>
-            <td>
-              <button class="btn-detail">chi tiết</button
-              ><button class="btn-edit">Sửa</button
-              ><button class="btn-delete">xóa</button>
-            </td>
+            <td>Nguyễn Văn A</td>
+            <td>nguyenvana@gmail.com</td>
+            <td>Khách hàng</td>
+            <td>Active</td>
+            <td><button>Sửa</button></td>
           </tr>
           <tr>
-            <td>SP_01</td>
-            <td>Váy chân dài</td>
-            <td>S</td>
-
-            <td>100,000đ</td>
-            <td>20</td>
-            <td>
-              <button class="btn-detail">chi tiết</button
-              ><button class="btn-edit">Sửa</button
-              ><button class="btn-delete">xóa</button>
-            </td>
+            <td>Nguyễn Văn A</td>
+            <td>nguyenvana@gmail.com</td>
+            <td>Khách hàng</td>
+            <td>Active</td>
+            <td><button>Sửa</button></td>
           </tr>
           <tr>
-            <td>SP_01</td>
-            <td>Váy chân dài</td>
-            <td>S</td>
-
-            <td>100,000đ</td>
-            <td>20</td>
-            <td>
-              <button class="btn-detail">chi tiết</button
-              ><button class="btn-edit">Sửa</button
-              ><button class="btn-delete">xóa</button>
-            </td>
-          </tr>
-          <tr>
-            <td>SP_01</td>
-            <td>Váy chân dài</td>
-            <td>S</td>
-
-            <td>100,000đ</td>
-            <td>20</td>
-            <td>
-              <button class="btn-detail">chi tiết</button
-              ><button class="btn-edit">Sửa</button
-              ><button class="btn-delete">xóa</button>
-            </td>
+            <td>Nguyễn Văn A</td>
+            <td>nguyenvana@gmail.com</td>
+            <td>Khách hàng</td>
+            <td>Active</td>
+            <td><button>Sửa</button></td>
           </tr>
         </table>
       </div>
@@ -270,7 +159,6 @@
               <li>Hot line: 0888999888</li>
             </ul>
           </div>
-       
           <div class="footer-col">
             <h4>Theo dõi</h4>
             <div class="social-links">

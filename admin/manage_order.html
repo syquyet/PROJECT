@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage_product</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Work+Sans:wght@500&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/sidenav.css" />
+    <link rel="stylesheet" href="/css/admin_css/order.css">
+    <link rel="stylesheet" href="/css/footer.css" />
+    <style>
+     
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <span
+              class="sidenav-menu"
+              style="font-size: 30px; cursor: pointer"
+              onclick="openNav()"
+              >&#9776;</span
+            >
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                >&times;</a
+              >
+              <div class="sidenav-avatar">
+                <img
+                  src="/image/anh sản phẩm 8.jpg"
+                  alt=""
+                  width="100px "
+                  height="100px"
+                />
+                <p>Role: Admin</p>
+                <p>Nguyễn VĂn A</p>
+                <button>Edit</button>
+
+                <hr />
+              </div>
+
+              <div class="sidenav-content">
+                <div>
+                  <i class="fa-solid fa-list"></i><a href="#">Dashboard</a>
+                </div>
+                <div>
+                  <i class="fa-solid fa-users"></i
+                  ><a
+                    href="http://127.0.0.1:5500/projec_html/sidenav_admin/manage_users.html"
+                    >User</a
+                  >
+                </div>
+                <div>
+                  <i class="fa-solid fa-file-invoice"></i
+                  ><a
+                    href="http://127.0.0.1:5500/projec_html/sidenav_admin/manage_product.html"
+                    >Product</a
+                  >
+                </div>
+                <div>
+                  <i class="fa-solid fa-right-from-bracket"></i>
+                  <a href="#">Log out</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="logo-content">
+            <img src="/image/logo.jpg" alt="" onclick="openNav()" /><big
+              >SUONGG STORE</big
+            >
+          </li>
+        </ul>
+        <ul class="nav-container">
+          <li><a href="/projec_html/index.html">TRANG CHỦ</a></li>
+          <li><a href="/projec_html/product.html"> SẢN PHẨM </a></li>
+          <li><a href="">BỘ SƯU TẬP</a></li>
+          <li><a href="" style="color: rgb(191, 88, 88)">KHUYẾN MÃI</a></li>
+        </ul>
+        <ul id="nav-right">
+          <li>
+            <button>
+              <a href="/projec_html/dangky.html">Đăng ký</a>
+            </button>
+          </li>
+          <li>
+            <button><a href="/projec_html/dangnhap.html">Đăng nhập</a></button>
+          </li>
+          <li>
+            <a href="http://127.0.0.1:5500/projec_html/cart.html"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="manager-order">
+        <h5>QUẢN LÝ ORDER</h5>
+        <div class="manage_users-input">
+          <input type="text" placeholder="Nhập từ khóa" /><button>
+            Tìm kiếm
+          </button>
+          <button class="btn-add">Thêm</button>
+        </div>
+        <table class="list-users">
+          <tr>
+            <th>#</th>
+            <th>Order ID</th>
+            <th>Ngày</th>
+            <th>Tên order</th>
+            
+            <th>Tổng giá</th>
+            <th>Trạng thái</th>
+            <th>Hành động</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>ORDER_001</td>
+            <td>05/09/2023</td>
+            <td>user_01</td>
+            <td>100,000đ</td>
+            <td>Đã đặt hàng</td>
+            <td>
+              <button class="btn-detail">chi tiết</button
+              ><button class="btn-edit">Sửa</button>
+            </td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>ORDER_001</td>
+            <td>05/09/2023</td>
+            <td>user_01</td>
+            <td>100,000đ</td>
+            <td>Đã đặt hàng</td>
+            <td>
+              <button class="btn-detail">chi tiết</button
+              ><button class="btn-edit">Sửa</button>
+            </td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>ORDER_001</td>
+            <td>05/09/2023</td>
+            <td>user_01</td>
+            <td>100,000đ</td>
+            <td>Đã đặt hàng</td>
+            <td>
+              <button class="btn-detail">chi tiết</button
+              ><button class="btn-edit">Sửa</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Sươngg store</h4>
+            <ul>
+              <li>Địa chỉ:42-Phạm Ngọc Thạch, TP.Vinh,Việt Nam.</li>
+              <li>Hot line: 0888999888</li>
+            </ul>
+          </div>
+         <div class="footer-col">
+            <h4>Theo dõi</h4>
+            <div class="social-links">
+              <a href="https://www.facebook.com/thusuong.1302"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <div>
+              <iframe
+                id="maps-shop"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15338.561926949256!2d108.2038231!3d16.0322201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1693217574068!5m2!1svi!2s"
+                width="500px"
+                height="250px"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "15%";
+    }
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+</html>

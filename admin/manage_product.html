@@ -30,87 +30,10 @@
     />
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/sidenav.css" />
+    <link rel="stylesheet" href="/css/admin_css/product.css">
     <link rel="stylesheet" href="/css/footer.css" />
     <style>
-      main {
-        padding-top: 100px;
-        width: 60%;
-        margin: 0 auto;
-      }
-      .manage_users-input input {
-        width: 70%;
-        border: none;
-        background-color: rgb(232, 241, 241);
-        border-radius: 5px 0 0 5px;
-        outline: none;
-      }
-      .manage_users-input button {
-        width: 15%;
-        border: none;
-        background-color: rgb(208, 60, 60);
-        color: white;
-        border-radius: 0 5px 5px 0;
-        object-fit: none;
-        padding: 0 3px;
-      }
-      .list-users {
-        width: 100%;
-       
-        margin-top: 30px;
-        margin-bottom: 30px;
-        background-color: rgb(232, 241, 241);
-        text-align: center;
-      }
-
-      .list-users th {
-        background-color: blueviolet;
-        color: white;
-      }
-      .list-users .btn-delete {
-        width: 20%;
-        border: none;
-        background-color: rgb(208, 60, 60);
-        border-radius: 5px;
-        color: white;
-        margin-right: 5px;
-      }
-      .list-users tr {
-        border-bottom: 1px solid rgb(189, 220, 220);
-      }
-      .list-users tr td {
-        padding: 5px 0;
-      }
-      .list-users .btn-edit {
-        width: 30%;
-        border: none;
-        background-color: blueviolet;
-        border-radius: 5px;
-        color: white;
-        margin-right: 5px;
-      }
-      .list-users .btn-detail {
-        width: 45%;
-        border: none;
-        background-color: rgb(191, 88, 88);
-        border-radius: 5px;
-        color: white;
-        margin-right: 5px;
-      }
-      .manage_users-input .btn-add {
-        width: 13%;
-        border: none;
-        background-color: rgb(191, 88, 88);
-        color: white;
-        border-radius: 5px;
-        padding: 0 3px;
-      }
-      .manager-order{
-        border: 1px solid rgb(173, 198, 198);
-        padding: 20px;
-        margin-bottom: 50px;
-        box-shadow: 1px 2px 4px rgb(186, 112, 78);
-        border-radius: 5px;
-      }
+     
     </style>
   </head>
   <body>
@@ -146,20 +69,12 @@
                 <div>
                   <i class="fa-solid fa-list"></i><a href="#">Dashboard</a>
                 </div>
+                <div><i class="fa-solid fa-users"></i><a href="">User</a></div>
+                <div><i class="fa-solid fa-shirt"></i>   <a href="">Product</a></div>
                 <div>
-                  <i class="fa-solid fa-users"></i
-                  ><a
-                    href="http://127.0.0.1:5500/projec_html/sidenav_admin/manage_users.html"
-                    >User</a
-                  >
+                  <i class="fa-solid fa-file-invoice"></i><a href="">Order</a>
                 </div>
-                <div>
-                  <i class="fa-solid fa-file-invoice"></i
-                  ><a
-                    href="http://127.0.0.1:5500/projec_html/sidenav_admin/manage_product.html"
-                    >Product</a
-                  >
-                </div>
+               
                 <div>
                   <i class="fa-solid fa-right-from-bracket"></i>
                   <a href="#">Log out</a>
@@ -167,19 +82,16 @@
               </div>
             </div>
           </li>
-          <li class="logo-content">
-            <img src="/image/logo.jpg" alt="" onclick="openNav()" /><big
-              >SUONGG STORE</big
-            >
-          </li>
+          <li class="logo-content"><img src="/image/logo.jpg" alt="" onclick="openNav()" /><big>SUONGG STORE</big></li>
         </ul>
+
         <ul class="nav-container">
           <li><a href="/projec_html/index.html">TRANG CHỦ</a></li>
           <li><a href="/projec_html/product.html"> SẢN PHẨM </a></li>
           <li><a href="">BỘ SƯU TẬP</a></li>
           <li><a href="" style="color: rgb(191, 88, 88)">KHUYẾN MÃI</a></li>
         </ul>
-        <ul class="nav-right">
+        <ul id="nav-right">
           <li>
             <button>
               <a href="/projec_html/dangky.html">Đăng ký</a>
@@ -197,8 +109,8 @@
       </nav>
     </header>
     <main>
-      <div class="manager-order">
-        <h5>QUẢN LÝ ORDER</h5>
+      <div class="manage-product">
+        <h5>QUẢN LÝ SẢN PHẨM</h5>
         <div class="manage_users-input">
           <input type="text" placeholder="Nhập từ khóa" /><button>
             Tìm kiếm
@@ -207,48 +119,65 @@
         </div>
         <table class="list-users">
           <tr>
-            <th>#</th>
-            <th>Order ID</th>
-            <th>Ngày</th>
-            <th>Tên order</th>
-            <th>Tổng giá</th>
-            <th>Trạng thái</th>
+            <th>ID</th>
+            <th>Tên sản phẩm</th>
+            <th>Size</th>
+
+            <th>Giá</th>
+            <th>Số lượng</th>
+
             <th>Hành động</th>
           </tr>
           <tr>
-            <td>1</td>
-            <td>ORDER_001</td>
-            <td>05/09/2023</td>
-            <td>user_01</td>
+            <td>SP_01</td>
+            <td>Váy chân dài</td>
+            <td>S</td>
+
             <td>100,000đ</td>
-            <td>Đã đặt hàng</td>
+            <td>20</td>
             <td>
               <button class="btn-detail">chi tiết</button
-              ><button class="btn-edit">Sửa</button>
+              ><button class="btn-edit">Sửa</button
+              ><button class="btn-delete">xóa</button>
             </td>
           </tr>
           <tr>
-            <td>1</td>
-            <td>ORDER_001</td>
-            <td>05/09/2023</td>
-            <td>user_01</td>
+            <td>SP_01</td>
+            <td>Váy chân dài</td>
+            <td>S</td>
+
             <td>100,000đ</td>
-            <td>Đã đặt hàng</td>
+            <td>20</td>
             <td>
               <button class="btn-detail">chi tiết</button
-              ><button class="btn-edit">Sửa</button>
+              ><button class="btn-edit">Sửa</button
+              ><button class="btn-delete">xóa</button>
             </td>
           </tr>
           <tr>
-            <td>1</td>
-            <td>ORDER_001</td>
-            <td>05/09/2023</td>
-            <td>user_01</td>
+            <td>SP_01</td>
+            <td>Váy chân dài</td>
+            <td>S</td>
+
             <td>100,000đ</td>
-            <td>Đã đặt hàng</td>
+            <td>20</td>
             <td>
               <button class="btn-detail">chi tiết</button
-              ><button class="btn-edit">Sửa</button>
+              ><button class="btn-edit">Sửa</button
+              ><button class="btn-delete">xóa</button>
+            </td>
+          </tr>
+          <tr>
+            <td>SP_01</td>
+            <td>Váy chân dài</td>
+            <td>S</td>
+
+            <td>100,000đ</td>
+            <td>20</td>
+            <td>
+              <button class="btn-detail">chi tiết</button
+              ><button class="btn-edit">Sửa</button
+              ><button class="btn-delete">xóa</button>
             </td>
           </tr>
         </table>
@@ -264,7 +193,8 @@
               <li>Hot line: 0888999888</li>
             </ul>
           </div>
-         <div class="footer-col">
+       
+          <div class="footer-col">
             <h4>Theo dõi</h4>
             <div class="social-links">
               <a href="https://www.facebook.com/thusuong.1302"
@@ -296,6 +226,7 @@
     function openNav() {
       document.getElementById("mySidenav").style.width = "15%";
     }
+
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
     }

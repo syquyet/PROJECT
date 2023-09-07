@@ -14,8 +14,9 @@ form {
 }
 
 form * {
-  padding: 5px;
-  margin: 5px 20px;
+  padding: 3px;
+  margin: 3px 20px;
+  font-size: 12px;
 }
 form input {
   border-radius: 10px;
@@ -31,15 +32,18 @@ form button:hover {
 form button {
   width: 30%;
   background-color: rgb(191, 88, 88);
+  /* color: white; */
 font-size: 16px;
   border-radius: 20px;
   border: hidden;
   transition: 0.25s;
+
 }
 #btn-form-login {
   text-align: center;
 }
 form h2 {
+  font-size: 30px;
   padding-top: 20px;
   text-align: center;
   color: rgb(191, 88, 88);

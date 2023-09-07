@@ -25,88 +25,17 @@
 
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/product.css" />
+    <link rel="stylesheet" href="/css/product_detail.css" />
     <link rel="stylesheet" href="/css/footer.css" />
-    <style>
-      .product_detail-container {
-        display: flex;
-        border: 1px solid rgb(198, 170, 170);
-        margin: 50px ;
-        box-shadow: 1px 2px 4px rgb(186, 112, 78);
-       
-      }
-      .product_detail-banner {
-        width: 40%;
-        margin: 20px;
-      }
-      .product_detail-content {
-        margin-top: 100px;
-        width:44%;
-        height: 100%;
-      }
-      .btn-size button {
-        margin: 0 5px;
-        width: 40px;
-        border: 1px solid rgb(73, 66, 66);
-      }
-      .btn-size button:hover{
-        border: 1px solid rgb(208, 73, 73);
-        background-color: rgb(208, 73, 73);
-      }
-      .btn-quantity button {
-        width: 40px;
-        border: 1px solid rgb(73, 66, 66);
-        border: none;
-      }
-      .btn-quantity .btn-quantity-reduce:hover {
-        background-color: rgb(192, 203, 203);
-        transition: 0.2s ease-in-out;
-      }
-      .btn-quantity .btn-quantity-add:hover {
-        background-color: rgb(192, 203, 203);
-        transition: 0.2s ease-in-out;
-      }
-      .btn-quantity span {
-        padding: 0 20px;
-      }
-      .btn-quantity {
-        border: 1px solid rgb(150, 134, 134);
-        width: 27.8%;
-        margin: 0 0 15px 0;
-      }
-      .product_detail-btn-buynow {
-        background-color: rgb(119, 165, 218);
-        width: 35%;
-        border: 1px solid rgb(150, 134, 134);
-      }
-      .product_detail-btn-buynow:hover{
-        background-color: rgb(60, 127, 203);
-      }
-      .btn-add-product_detail {
-        width: 35%;
-        border: 1px solid rgb(172, 163, 163);
-      }
-      .btn-add-product_detail:hover {
-        background-color: rgb(192, 203, 203);
-        transition: 0.2s ease-in-out;
-      }
-      .product_detail-btn-delete {
-        border: 1px solid rgb(150, 134, 134);
-        width: 40px;
-        background-color: rgb(165, 68, 68);
-      }
-      .product_detail-btn-delete:hover{
-        background-color: brown
-      }
-      .product_detail-content h5{
-        color: rgb(139, 166, 187);
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <header>
       <nav>
         <ul>
-          <li class="logo-content"><img src="/image/logo.jpg" alt="" /><big>SUONGG STORE</big></li>
+          <li class="logo-content">
+            <img src="/image/logo.jpg" alt="" /><big>SUONGG STORE</big>
+          </li>
         </ul>
         <ul class="nav-container">
           <li><a href="/projec_html/index.html">TRANG CHỦ</a></li>
@@ -114,7 +43,7 @@
           <li><a href="">BỘ SƯU TẬP</a></li>
           <li><a href="" style="color: rgb(191, 88, 88)">KHUYẾN MÃI</a></li>
         </ul>
-        <ul class="nav-right">
+        <ul id="nav-right">
           <li>
             <button>
               <a href="/projec_html/dangky.html">Đăng ký</a>
@@ -217,16 +146,20 @@
           </div>
 
           <div>
-           <a href="http://127.0.0.1:5500/projec_html/cart.html"><button class="btn-add-product_detail">Thêm vào giỏ hàng</button></a> 
+            <a href=""
+              ><button class="btn-add-product_detail">
+                Thêm vào giỏ hàng
+              </button></a
+            >
             <button class="product_detail-btn-buynow">Mua ngay</button>
             <button class="product_detail-btn-delete">xóa</button>
           </div>
 
-         <h6>Mô tả sản phẩm</h6>
+          <h6>Mô tả sản phẩm</h6>
           <hr />
-          Áo vest luôn có sức hút và vị trí riêng trong vô vàn sản phẩm thời
-          trang cho nam. Áo vest cũng mang đến một hình ảnh chỉnh chu, sang
-          trọng và nam tính quyến rũ.
+          Váy chân dài luôn có sức hút và vị trí riêng trong vô vàn sản phẩm
+          thời trang cho nữ. Váy chân dài cũng mang đến một hình ảnh chỉnh chu,
+          sang trọng và nữ tính quyến rũ.
         </section>
       </section>
     </main>
@@ -241,7 +174,7 @@
               <li>Hot line: 0888999888</li>
             </ul>
           </div>
-         
+
           <div class="footer-col">
             <h4>Theo dõi</h4>
             <div class="social-links">
@@ -270,4 +203,7 @@
       </div>
     </footer>
   </body>
+  <script src="/JS/product_detail.js"></script>
+  <script src="/utils/header.js"></script>
+  <script src="/utils/method.js"></script>
 </html>
