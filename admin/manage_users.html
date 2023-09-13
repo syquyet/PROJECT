@@ -30,17 +30,15 @@
     />
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/sidenav.css" />
-    <link rel="stylesheet" href="/css/admin_css/users.css">
+    <link rel="stylesheet" href="/css/admin_css/users.css" />
     <link rel="stylesheet" href="/css/footer.css" />
-    <style>
-      
-    </style>
+    <style></style>
   </head>
   <body>
     <header>
       <nav>
         <ul>
-          <li>
+          <li class="sidenav-admin">
             <span
               class="sidenav-menu"
               style="font-size: 30px; cursor: pointer"
@@ -67,14 +65,22 @@
 
               <div class="sidenav-content">
                 <div>
-                  <i class="fa-solid fa-list"></i><a href="#">Dashboard</a>
+                  <i class="fa-solid fa-list"></i
+                  ><a href="/admin/dashboard.html">Dashboard</a>
                 </div>
-                <div><i class="fa-solid fa-users"></i><a href="">User</a></div>
-                <div><i class="fa-solid fa-shirt"></i>   <a href="">Product</a></div>
                 <div>
-                  <i class="fa-solid fa-file-invoice"></i><a href="">Order</a>
+                  <i class="fa-solid fa-users"></i
+                  ><a href="/admin/manage_users.html">User</a>
                 </div>
-               
+                <div>
+                  <i class="fa-solid fa-shirt"></i>
+                  <a href="/admin/manage_product.html">Product</a>
+                </div>
+                <div>
+                  <i class="fa-solid fa-file-invoice"></i
+                  ><a href="/admin/manage_order.html">Order</a>
+                </div>
+
                 <div>
                   <i class="fa-solid fa-right-from-bracket"></i>
                   <a href="#">Log out</a>
@@ -82,29 +88,18 @@
               </div>
             </div>
           </li>
-          <li class="logo-content"><img src="/image/logo.jpg" alt="" onclick="openNav()" /><big>SUONGG STORE</big></li>
+          <li class="logo-content">
+            <img src="/image/logo.jpg" alt="" onclick="openNav()" /><big
+              >SUONGG STORE</big
+            >
+          </li>
         </ul>
 
         <ul class="nav-container">
-          <li><a href="/projec_html/index.html">TRANG CHỦ</a></li>
-          <li><a href="/projec_html/product.html"> SẢN PHẨM </a></li>
+          <li><a href="/index.html">TRANG CHỦ</a></li>
+          <li><a href="/product.html"> SẢN PHẨM </a></li>
           <li><a href="">BỘ SƯU TẬP</a></li>
           <li><a href="" style="color: rgb(191, 88, 88)">KHUYẾN MÃI</a></li>
-        </ul>
-        <ul id="nav-right">
-          <li>
-            <button>
-              <a href="/projec_html/dangky.html">Đăng ký</a>
-            </button>
-          </li>
-          <li>
-            <button><a href="/projec_html/dangnhap.html">Đăng nhập</a></button>
-          </li>
-          <li>
-            <a href="http://127.0.0.1:5500/projec_html/cart.html"
-              ><i class="fa-solid fa-cart-shopping"></i
-            ></a>
-          </li>
         </ul>
       </nav>
     </header>
@@ -112,9 +107,11 @@
       <div class="manage-user">
         <h5>QUẢN LÝ NGƯỜI DÙNG</h5>
         <div class="manage_users-input">
-          <input type="text" placeholder="Nhập từ khóa" /><button>
-            Tìm kiếm
-          </button>
+          <input
+            id="manage-user-seach"
+            type="text"
+            placeholder="Nhập từ khóa"
+          /><button onclick="handleSeachUser()">Tìm kiếm</button>
         </div>
         <table class="list-users">
           <tr>
@@ -187,6 +184,9 @@
       </div>
     </footer>
   </body>
+  <script src="/utils/method.js"></script>
+  <script src="/admin/admin.js"></script>
+  <script src="/admin/manage_user.js"></script>
   <script>
     function openNav() {
       document.getElementById("mySidenav").style.width = "15%";

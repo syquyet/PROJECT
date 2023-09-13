@@ -1,9 +1,6 @@
 function editUser() {
   const accountsDB = JSON.parse(localStorage.getItem("accounts")) || [];
-  console.log("666", accountsDB);
   const userLogin = JSON.parse(localStorage.getItem("userLogin")) || {};
-  console.log("555", userLogin);
-
   for (const account of accountsDB) {
     if (userLogin.email === account.email) {
       document.querySelector("#input-name").value = account.name;
@@ -33,7 +30,6 @@ function handleEdit() {
   localStorage.setItem("accounts", JSON.stringify(accountsDB));
   resetForm();
 }
-
 function resetForm() {
   document.querySelector("#input-name").value = "";
   document.querySelector("#input-email").value = "";
@@ -41,19 +37,17 @@ function resetForm() {
   document.querySelector("#input-phone").value = "";
 }
 function handleDelete() {
-    
   const accountsDB = JSON.parse(localStorage.getItem("accounts")) || [];
-  console.log("888", accountsDB);
   const userLogin = JSON.parse(localStorage.getItem("userLogin")) || {};
-  console.log("777", userLogin);
   accountsDB.forEach((account, index) => {
     if (userLogin.email === account.email) {
       accountsDB.splice(index, 1);
       localStorage.removeItem("userLogin");
-      
     }
   });
   localStorage.setItem("accounts", JSON.stringify(accountsDB));
   navigation("/");
-  
+}
+function handleBackOrderUser() {
+  navigation("account/orderUser.html");
 }

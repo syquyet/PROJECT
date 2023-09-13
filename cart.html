@@ -36,19 +36,21 @@
           <li class="logo-content"><img src="/image/logo.jpg" alt="" /><big>SUONGG STORE</big></li>
         </ul>
         <ul class="nav-container">
-          <li><a href="/projec_html/index.html">TRANG CHỦ</a></li>
-          <li><a href="/projec_html/product.html"> SẢN PHẨM </a></li>
+          <li><a href="/index.html">TRANG CHỦ</a></li>
+          <li><a href="/product.html"> SẢN PHẨM </a></li>
           <li><a href="">BỘ SƯU TẬP</a></li>
           <li><a href="" style="color: rgb(191, 88, 88)">KHUYẾN MÃI</a></li>
         </ul>
-        <ul class="nav-right">
+        <ul id="nav-right">
           <li>
-            <button>
-              <a href="/projec_html/dangky.html">Đăng ký</a>
+            <button onclick="handleRegisert()">
+              Đăng ký
             </button>
           </li>
           <li>
-            <button><a href="/projec_html/dangnhap.html">Đăng nhập</a></button>
+            <button onclick="handleLogin()">
+              Đăng nhập
+            </button>
           </li>
           <li><i class="fa-solid fa-cart-shopping"></i></li>
         </ul>
@@ -57,7 +59,7 @@
     <main>
       <div class="cart-container">
         <section class="cart-list_product">
-          <table>
+          <table class="cart-list-product">
             <tr>
               <th>SẢN PHẨM</th>
               <th>GIÁ</th>
@@ -66,7 +68,7 @@
             </tr>
             <tr>
               <td class="cart-table-content">
-                <a href="">&times;</a>
+                <p>&times;</p>
                 <img
                   src="/image/anh sản phẩm 8.jpg"
                   alt=""
@@ -89,7 +91,7 @@
             </tr>
             <tr>
               <td class="cart-table-content">
-                <a href="">&times;</a>
+                <p>&times;</p>
                 <img
                   src="/image/anh sản phẩm 8.jpg"
                   alt=""
@@ -112,15 +114,15 @@
             </tr>
           </table>
 
-          <button class="back-product">Tiếp tục xem sản phẩm</button>
-          <button class="back-product">Lịch sử mua hàng</button>
+          <button class="back-product" onclick="handleBackProduct()">Tiếp tục xem sản phẩm</button>
+          <button class="back-product" onclick="handleBackOrderUser()">Lịch sử mua hàng</button>
         </section>
         <section class="payment">
           <table>
             <tr>
               <th>CỘNG GIỎ HÀNG</th>
             </tr>
-            <tr>
+            <tr >
               <td>Tạm tính</td>
               <td>100,000đ</td>
             </tr>
@@ -129,7 +131,7 @@
               <td>100,000đ</td>
             </tr>
           </table>
-          <button class="payment-now">TIẾN HÀNH THANH TOÁN</button>
+          <button class="payment-now" onclick="handlePay()">TIẾN HÀNH THANH TOÁN</button>
         </section>
       </div>
     </main>

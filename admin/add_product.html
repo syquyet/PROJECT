@@ -40,7 +40,7 @@
     <header>
       <nav>
         <ul>
-          <li>
+          <li class="sidenav-admin">
             <span
               class="sidenav-menu"
               style="font-size: 30px; cursor: pointer"
@@ -67,14 +67,20 @@
 
               <div class="sidenav-content">
                 <div>
-                  <i class="fa-solid fa-list"></i><a href="#">Dashboard</a>
-                </div>
-                <div><i class="fa-solid fa-users"></i><a href="">User</a></div>
-                <div>
-                  <i class="fa-solid fa-shirt"></i> <a href="">Product</a>
+                  <i class="fa-solid fa-list"></i
+                  ><a href="/admin/dashboard.html">Dashboard</a>
                 </div>
                 <div>
-                  <i class="fa-solid fa-file-invoice"></i><a href="">Order</a>
+                  <i class="fa-solid fa-users"></i
+                  ><a href="/admin/manage_users.html">User</a>
+                </div>
+                <div>
+                  <i class="fa-solid fa-shirt"></i>
+                  <a href="/admin/manage_product.html">Product</a>
+                </div>
+                <div>
+                  <i class="fa-solid fa-file-invoice"></i
+                  ><a href="/admin/manage_order.html">Order</a>
                 </div>
 
                 <div>
@@ -97,21 +103,6 @@
           <li><a href="">BỘ SƯU TẬP</a></li>
           <li><a href="" style="color: rgb(191, 88, 88)">KHUYẾN MÃI</a></li>
         </ul>
-        <ul id="nav-right">
-          <li>
-            <button>
-              <a href="/projec_html/dangky.html">Đăng ký</a>
-            </button>
-          </li>
-          <li>
-            <button><a href="/projec_html/dangnhap.html">Đăng nhập</a></button>
-          </li>
-          <li>
-            <a href="http://127.0.0.1:5500/projec_html/cart.html"
-              ><i class="fa-solid fa-cart-shopping"></i
-            ></a>
-          </li>
-        </ul>
       </nav>
     </header>
     <main>
@@ -121,21 +112,41 @@
           <hr />
 
           <label for="">Mã sản phẩm: </label>
-          <input type="text" />
+          <input id="input-add-id" type="text" />
           <p></p>
           <label for="">Tên sản phẩm:</label>
-          <input type="text" />
+          <input id="input-add-name" type="text" />
           <p></p>
           <label for="">Mô tả:</label><br />
-          <textarea name="" id="" cols="35%" rows="2px"></textarea>
+          <textarea
+            id="input-add-describe"
+            name=""
+            id=""
+            cols="35%"
+            rows="2px"
+          ></textarea>
+          <p></p>
+          <label for="">size:</label>
+          <input id="input-add-size" type="text" />
           <p></p>
           <label for="">Đơn giá:</label>
-          <input type="number" />
+          <input id="input-add-price" type="number" />
+          <p></p>
+          <label for="">Số lượng:</label>
+          <input id="input-add-quantity" type="number" />
+          <p></p>
           <label for="">Hình ảnh:</label>
-          <input type="text" />
+          <input id="input-add-image" type="file" />
           <p></p>
           <div>
-            <button>Lưu</button> <button class="btn-delete">Hủy</button>
+            <button type="button" onclick="handleAddProduct()">Lưu</button>
+            <button
+              type="button"
+              class="btn-delete"
+              onclick="handleDeleteForm()"
+            >
+              Hủy
+            </button>
           </div>
         </form>
       </div>
@@ -179,6 +190,9 @@
       </div>
     </footer>
   </body>
+  <script src="/utils/method.js"></script>
+  <script src="/admin/admin.js"></script>
+  <script src="/admin/add_product.js"></script>
   <script>
     function openNav() {
       document.getElementById("mySidenav").style.width = "15%";

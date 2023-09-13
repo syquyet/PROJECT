@@ -38,19 +38,17 @@
           </li>
         </ul>
         <ul class="nav-container">
-          <li><a href="/projec_html/index.html">TRANG CHỦ</a></li>
-          <li><a href="/projec_html/product.html"> SẢN PHẨM </a></li>
+          <li><a href="/index.html">TRANG CHỦ</a></li>
+          <li><a href="/product.html"> SẢN PHẨM </a></li>
           <li><a href="">BỘ SƯU TẬP</a></li>
           <li><a href="" style="color: rgb(191, 88, 88)">KHUYẾN MÃI</a></li>
         </ul>
         <ul id="nav-right">
           <li>
-            <button>
-              <a href="/projec_html/dangky.html">Đăng ký</a>
-            </button>
+            <button onclick="handleRegisert()">Đăng ký</button>
           </li>
           <li>
-            <button><a href="/projec_html/dangnhap.html">Đăng nhập</a></button>
+            <button onclick="handleLogin()">Đăng nhập</button>
           </li>
           <li><i class="fa-solid fa-cart-shopping"></i></li>
         </ul>
@@ -141,16 +139,16 @@
           </div>
           <p>Chọn số lượng:</p>
           <div class="btn-quantity">
-            <button class="btn-quantity-reduce">-</button><span>0</span
+            <button class="btn-quantity-reduce">-</button><span>1</span
             ><button class="btn-quantity-add">+</button>
           </div>
 
           <div>
-            <a href=""
-              ><button class="btn-add-product_detail">
+           
+              <button class="btn-add-product_detail">
                 Thêm vào giỏ hàng
-              </button></a
-            >
+              </button>
+            
             <button class="product_detail-btn-buynow">Mua ngay</button>
             <button class="product_detail-btn-delete">xóa</button>
           </div>

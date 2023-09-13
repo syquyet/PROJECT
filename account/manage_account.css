@@ -1,0 +1,43 @@
+.manage-account {
+    width: 400px;
+    margin: 100px auto;
+    border: 1px solid rgb(181, 143, 143);
+    padding: 20px;
+    box-shadow: 1px 2px 4px rgb(186, 112, 78);
+    border-radius: 5px;
+  }
+  .manage-account * {
+    margin-bottom: 5px;
+  }
+
+  form input {
+    width: 100%;
+    padding: 0 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(177, 152, 152);
+  }
+  .account-btn-edit {
+    width: 29%;
+    background-color: blueviolet;
+    border-radius: 5px;
+    color: white;
+    border: none;
+  }
+  .account-btn-delete {
+    width: 30%;
+    background-color: rgb(191, 88, 88);
+    border-radius: 5px;
+    color: white;
+    border: none;
+  }
+  .account-btn-history {
+    width: 59.5%;
+    background-color: rgb(191, 88, 88);
+    border-radius: 5px;
+    color: white;
+    border: none;
+  }
+  .account-btn {
+    text-align: center;
+  }

@@ -1,79 +1,92 @@
 main {
-    padding-top: 100px;
-    width: 60%;
-    margin: 0 auto;
-  }
-  .manage_users-input input {
-    width: 70%;
-    border: none;
-    background-color: rgb(232, 241, 241);
-    border-radius: 5px 0 0 5px;
-    outline: none;
-  }
-  .manage_users-input button {
-    width: 15%;
-    border: none;
-    background-color: rgb(208, 60, 60);
-    color: white;
-    border-radius: 0 5px 5px 0;
-    object-fit: none;
-    padding: 0 3px;
-  }
-  .list-users {
-    width: 100%;
-    
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background-color: rgb(232, 241, 241);
-    text-align: center;
-  }
+  padding-top: 100px;
+  width: 60%;
+  margin: 0 auto;
+}
+.manage-product-input input {
+  width: 70%;
+  border: none;
+  background-color: rgb(232, 241, 241);
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+.manage-product-input button {
+  width: 15%;
+  border: none;
+  background-color: rgb(208, 60, 60);
+  color: white;
+  border-radius: 0 5px 5px 0;
+  object-fit: none;
+  padding: 0 3px;
+}
+.list-product {
+  width: 100%;
 
-  .list-users th {
-    background-color: blueviolet;
-    color: white;
-  }
-  .list-users .btn-delete {
-    width: 20%;
-    border: none;
-    background-color: rgb(208, 60, 60);
-    border-radius: 5px;
-    color: white;
-    margin-right: 5px;
-  }
-  .list-users tr {
-    border-bottom: 1px solid rgb(189, 220, 220);
-  }
-  .list-users tr td {
-    padding: 5px 0;
-  }
-  .list-users .btn-edit {
-    width: 20%;
-    border: none;
-    background-color: blueviolet;
-    border-radius: 5px;
-    color: white;
-    margin-right: 5px;
-  }
-  .list-users .btn-detail {
-    width: 45%;
-    border: none;
-    background-color: rgb(191, 88, 88);
-    border-radius: 5px;
-    color: white;
-    margin-right: 5px;
-  }
-  .manage_users-input .btn-add {
-    width: 13%;
-    border: none;
-    background-color: rgb(191, 88, 88);
-    color: white;
-    border-radius: 5px;
-    padding: 0 3px;
-  }
-  .manage-product{
-    border: 1px solid rgb(173, 198, 198);
-    padding: 20px;
-    margin-bottom: 50px;
-    box-shadow: 1px 2px 4px rgb(186, 112, 78);
-    border-radius: 5px;
-  }
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: rgb(232, 241, 241);
+  text-align: center;
+}
+
+.list-product th {
+  background-color: blueviolet;
+  color: white;
+}
+.list-product .btn-delete {
+  width: 20%;
+  border: none;
+  background-color: rgb(208, 60, 60);
+  border-radius: 5px;
+  color: white;
+  margin-right: 5px;
+}
+.list-product tr {
+  border-bottom: 1px solid rgb(189, 220, 220);
+}
+.list-product tr td {
+  padding: 5px 0;
+}
+.list-product .btn-edit {
+  width: 20%;
+  border: none;
+  background-color: blueviolet;
+  border-radius: 5px;
+  color: white;
+  margin-right: 5px;
+}
+.list-product .btn-detail {
+  width: 45%;
+  border: none;
+  background-color: rgb(191, 88, 88);
+  border-radius: 5px;
+  color: white;
+  margin-right: 5px;
+}
+.manage-product-input .btn-add {
+  width: 13%;
+  border: none;
+  background-color: rgb(191, 88, 88);
+  color: white;
+  border-radius: 5px;
+  padding: 0 3px;
+}
+.manage-product {
+  border: 1px solid rgb(173, 198, 198);
+  padding: 20px;
+  margin-bottom: 50px;
+  box-shadow: 1px 2px 4px rgb(186, 112, 78);
+  border-radius: 5px;
+}
+nav {
+  justify-content: left;
+}
+
+.form-add-product form {
+  margin: 0px;
+  width: 100%;
+  padding: 50px;
+  border-radius: 5px;
+}
+.modal-body {
+  padding: 0px;
+}

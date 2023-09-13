@@ -24,7 +24,7 @@
     />
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/footer.css" />
-   <link rel="stylesheet" href="/account/manage_account.css">
+    <link rel="stylesheet" href="/account/orderUser.css" />
   </head>
   <body>
     <header>
@@ -54,48 +54,67 @@
       </nav>
     </header>
     <main>
-      <section class="manage-account">
-        <form action="">
-          <h5>THÔNG TIN KHÁCH HÀNG</h5>
-          <hr />
+      <div class="manager-orderUser">
+        <h5>LỊCH SỬ ORDER</h5>
+        <div class="manage_orderUser-input">
+          <input id="manage-orderUser-seach" type="text" placeholder="Nhập từ khóa" /><button type="button" onclick="handleSeachOrderUser()">
+            Tìm kiếm
+          </button>
+        </div>
+        <table class="list-orderUser">
+          <tr>
+            <th>#</th>
+            <th>Ngày</th>
+            <th>tên sản phẩm</th>
+            <th>số lượng</th>
+            <th>size</th>
+            <th>Tổng giá</th>
+            <th>Trạng thái</th>
+            <th>Hành động</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>05/09/2023</td>
+            <td>tên sản phẩm</td>
+            <td>số lượng</td>
+            <td>size</td>
+            <td>100,000đ</td>
+            <td>Đã đặt hàng</td>
+            <td>
+              <button class="btn-detail">chi tiết</button
+              ><button class="btn-edit">Sửa</button>
+            </td>
+          </tr>
+          <tr>
+            <td>1</td>
 
-          <div>
-            <label for="">Tên khách hàng:</label><br />
-            <input id="input-name" type="text" />
-          </div>
-          <div>
-            <label for="">Email:</label><br />
-            <input id="input-email" type="email" />
-          </div>
-          <div>
-            <label for="">Số điện thoại:</label><br />
-            <input id="input-phone" type="number" />
-          </div>
-          <div>
-            <label for="">Mật khẩu: </label><br />
-            <input id="input-password" type="text" />
-          </div>
+            <td>05/09/2023</td>
+            <td>tên sản phẩm</td>
+            <td>số lượng</td>
+            <td>size</td>
+            <td>100,000đ</td>
+            <td>Đã đặt hàng</td>
+            <td>
+              <button class="btn-detail">chi tiết</button
+              ><button class="btn-edit">Sửa</button>
+            </td>
+          </tr>
+          <tr>
+            <td>1</td>
 
-          <div class="account-btn">
-            <div>
-              <button class="account-btn-edit" onclick="handleEdit()">
-                edit
-              </button>
-              <button
-                class="account-btn-delete"
-                onclick="handleDelete() "
-                type="button"
-              >
-                delete
-              </button>
-            </div>
-
-            <div>
-              <button type="button" class="account-btn-history" onclick="handleBackOrderUser()">Lịch sử mua hàng</button>
-            </div>
-          </div>
-        </form>
-      </section>
+            <td>05/09/2023</td>
+            <td>tên sản phẩm</td>
+            <td>số lượng</td>
+            <td>size</td>
+            <td>100,000đ</td>
+            <td>Đã đặt hàng</td>
+            <td>
+              <button class="btn-detail">chi tiết</button
+              ><button class="btn-edit">Sửa</button>
+            </td>
+          </tr>
+        </table>
+      </div>
     </main>
 
     <footer class="footer">
@@ -139,5 +158,5 @@
   </body>
   <script src="/utils/method.js"></script>
   <script src="/utils/header.js"></script>
-  <script src="/account/edit_user.js"></script>
+  <script src="/account/orderUser.js"></script>
 </html>

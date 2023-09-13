@@ -1,16 +1,16 @@
 main {
     padding-top: 100px;
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
   }
-  .manage_order-input input {
+  .manage_orderUser-input input {
     width: 70%;
     border: none;
     background-color: rgb(232, 241, 241);
     border-radius: 5px 0 0 5px;
     outline: none;
   }
-  .manage_order-input button {
+  .manage_orderUser-input button {
     width: 15%;
     border: none;
     background-color: rgb(208, 60, 60);
@@ -19,7 +19,7 @@ main {
     object-fit: none;
     padding: 0 3px;
   }
-  .list-order {
+  .list-orderUser {
     width: 100%;
    
     margin-top: 30px;
@@ -28,11 +28,11 @@ main {
     text-align: center;
   }
 
-  .list-order th {
+  .list-orderUser th {
     background-color: blueviolet;
     color: white;
   }
-  .list-order .btn-delete {
+  .list-orderUser .btn-delete {
     width: 20%;
     border: none;
     background-color: rgb(208, 60, 60);
@@ -40,13 +40,13 @@ main {
     color: white;
     margin-right: 5px;
   }
-  .list-order tr {
+  .list-orderUser tr {
     border-bottom: 1px solid rgb(189, 220, 220);
   }
-  .list-order tr td {
+  .list-orderUser tr td {
     padding: 5px 0;
   }
-  .list-order .btn-edit {
+  .list-orderUser .btn-edit {
     width: 30%;
     border: none;
     background-color: blueviolet;
@@ -54,7 +54,7 @@ main {
     color: white;
     margin-right: 5px;
   }
-  .list-order .btn-detail {
+  .list-orderUser .btn-detail {
     width: 45%;
     border: none;
     background-color: rgb(191, 88, 88);
@@ -62,7 +62,7 @@ main {
     color: white;
     margin-right: 5px;
   }
-  .manage_order-input .btn-add {
+  .manage_orderUser-input .btn-add {
     width: 13%;
     border: none;
     background-color: rgb(191, 88, 88);
@@ -70,13 +70,11 @@ main {
     border-radius: 5px;
     padding: 0 3px;
   }
-  .manager-order{
+  .manager-orderUser{
     border: 1px solid rgb(173, 198, 198);
     padding: 20px;
     margin-bottom: 50px;
     box-shadow: 1px 2px 4px rgb(186, 112, 78);
     border-radius: 5px;
   }
-  nav{
-    justify-content: left;
-    }
+  

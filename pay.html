@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>product_detail</title>
+    <title>pay</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -25,11 +25,9 @@
 
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/product.css" />
-    <link rel="stylesheet" href="/css/pay.css">
+    <link rel="stylesheet" href="/css/pay.css" />
     <link rel="stylesheet" href="/css/footer.css" />
-    <style>
-      
-    </style>
+    <style></style>
   </head>
   <body>
     <header>
@@ -40,19 +38,17 @@
           </li>
         </ul>
         <ul class="nav-container">
-          <li><a href="/projec_html/index.html">TRANG CHỦ</a></li>
-          <li><a href="/projec_html/product.html"> SẢN PHẨM </a></li>
+          <li><a href="/index.html">TRANG CHỦ</a></li>
+          <li><a href="/product.html"> SẢN PHẨM </a></li>
           <li><a href="">BỘ SƯU TẬP</a></li>
           <li><a href="" style="color: rgb(191, 88, 88)">KHUYẾN MÃI</a></li>
         </ul>
         <ul id="nav-right">
           <li>
-            <button>
-              <a href="/projec_html/dangky.html">Đăng ký</a>
-            </button>
+            <button onclick="handleRegisert()">Đăng ký</button>
           </li>
           <li>
-            <button><a href="/projec_html/dangnhap.html">Đăng nhập</a></button>
+            <button onclick="handleLogin()">Đăng nhập</button>
           </li>
           <li><i class="fa-solid fa-cart-shopping"></i></li>
         </ul>
@@ -63,58 +59,36 @@
         <section class="pay-address">
           <h6>THÔNG TIN THANH TOÁN</h6>
           <p>Họ và tên:</p>
-          <input type="text" placeholder="Họ và tên" />
+          <input id="pay-input-name" type="text" placeholder="Họ và tên" />
           <p>Số điện thoại:</p>
-          <input type="number" placeholder="Số điện thoại" />
+          <input
+            id="pay-input-phone"
+            type="number"
+            placeholder="Số điện thoại"
+          />
           <p>Email:</p>
-          <input type="email" placeholder="Email" />
+          <input id="pay-input-email" type="email" placeholder="Email" />
           <div class="pay-address-city">
             <div>
               <p>Tỉnh/Thành phố</p>
-              <select name="Tỉnh/Thành phố" id="">
-                <option value="Hồ Chí Minh">Hồ Chí Minh</option>
-                <option value="Hà Nội">Hà Nội</option>
-                <option value="Đà Nẵng">Đà Nẵng</option>
-                <option value="Hải Phòng">Hải Phòng</option>
-                <option value="Vinh">Vinh</option>
-                <option value="Huế">Huế</option>
-                <option value="Cần Thơ">Cần Thơ</option>
-              </select>
+              <input  id="pay-input-adress1" type="text" placeholder="Tỉnh/Thành phố" />
             </div>
             <div>
               <p>Quận/Huyện</p>
-              <select name="Quận/Huyện" id="">
-                <option value="Quận 1">Quận 1</option>
-                <option value="Quận 2">Quận 2</option>
-                <option value="Quận 3">Quận 3</option>
-                <option value="Quận 4">Quận 4</option>
-                <option value="Quận 5">Quận 5</option>
-                <option value="Quận 6">Quận 6</option>
-                <option value="Quận 7">Quận 7</option>
-                <option value="Quận 8">Quận 8</option>
-              </select>
+              <input id="pay-input-adress2" type="text" placeholder="Quận/Huyện" />
             </div>
             <div>
               <p>Phường/Xã</p>
-              <select name="Phường/Xã" id="">
-                <option value="Phường 1">Phường 1</option>
-                <option value="Phường 2">Phường 2</option>
-                <option value="Phường 3">Phường 3</option>
-                <option value="Phường 4">Phường 4</option>
-                <option value="Phường 5">Phường 5</option>
-                <option value="Phường 6">Phường 6</option>
-                <option value="Phường 7">Phường 7</option>
-                <option value="Phường 8">Phường 8</option>
-              </select>
+              <input id="pay-input-adress3" type="text" placeholder="Phường/Xã" />
             </div>
           </div>
           <p>Địa chỉ:</p>
-          <input type="text" placeholder="Ví dụ: Số 20, ngõ 90" />
+          <input id="pay-input-adress4" type="text" placeholder="Ví dụ: Số 20, ngõ 90" />
           <h6>THÔNG TIN BỔ SUNG</h6>
           <p>Ghi chú đơn hàng(tùy chọn)</p>
           <textarea
             name=""
-            id=""
+            id="pay-input-note"
             cols="30"
             rows="2"
             placeholder="ghí chú về đơn hàng, hay địa điiểm giao hàng chi tiết hơn"
@@ -122,7 +96,7 @@
         </section>
         <section class="pay-product">
           <h6>ĐƠN HÀNG CỦA BẠN</h6>
-          <table>
+          <table class="pay-product-list">
             <tr>
               <th>SẢN PHẨM</th>
               <th>TẠM TÍNH</th>
@@ -143,7 +117,7 @@
               </td>
               <td>100,000đ</td>
             </tr>
-            <tr>
+            <tr class="sum-money">
               <td>TẠM TÍNH</td>
               <td>100,000đ</td>
             </tr>
@@ -152,7 +126,7 @@
               <td>100,000đ</td>
             </tr>
           </table>
-          <div class="pay-product-btn"><button>ĐẶT HÀNG</button></div>
+          <div class="pay-product-btn"><button type="button" onclick="handleOrderProduct()">ĐẶT HÀNG</button></div>
         </section>
       </div>
     </main>
@@ -196,4 +170,7 @@
       </div>
     </footer>
   </body>
+  <script src="/utils/method.js"></script>
+  <script src="/utils/header.js"></script>
+  <script src="/JS/pay.js"></script>
 </html>

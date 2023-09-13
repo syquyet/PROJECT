@@ -1,5 +1,3 @@
-// const userLogins = [];
-
 const formElement = document.querySelector("form");
 const emailElement = document.querySelector("#email");
 const passwordElement = document.querySelector("#password");
@@ -17,36 +15,48 @@ formElement.addEventListener("submit", (e) => {
   }
   // B3 tải userlogin từ local
 
-  const accountsDB = JSON.parse(localStorage.getItem("accounts")) ||[];
+  const accountsDB = JSON.parse(localStorage.getItem("accounts")) || [];
   console.log("222222", accountsDB);
-  const userLoginsDB = JSON.parse(localStorage.getItem("userLogins"))||{} ;
+  const userLoginsDB = JSON.parse(localStorage.getItem("userLogin")) || {};
   console.log("1111111", userLoginsDB);
 
   let isExist = false;
   for (const userDB of accountsDB) {
-    if (userDB.email === user.email) {
+    if (userDB.email === user.email && userDB.role === "user") {
       if (userDB.password === user.password) {
+        user.role = "user";
         isExist = true;
         break;
+      }
+    } else {
+      if (userDB.email === user.email && userDB.role === "admin") {
+        if (userDB.password === user.password) {
+          user.role = "admin";
+          isExist = true;
+          break;
+        }
       }
     }
   }
 
   if (isExist) {
     let isLogin = false;
-    
-      if (userLoginsDB.email === user.email) {
-        isLogin = true;
-       
-      }
-    
+
+    if (userLoginsDB.email === user.email) {
+      isLogin = true;
+    }
+
     if (!isLogin) {
       delete user.password;
       // userLoginsDB.push(user);
       localStorage.setItem("userLogin", JSON.stringify(user));
+      if (user.role === "user") {
+        navigation("/");
+      }if(user.role==="admin"){
+        navigation("admin/dashboard.html");
+      }
 
-      navigation("/");
-       return;
+      return;
     } else {
       error.isError = true;
       error.msgEmail = "*Tài khoản đã tồn tại vui lòng đăng nhập lại";
@@ -89,6 +99,6 @@ function readerError(error) {
   errorPasswordElement.textContent = error.msgPassword;
 }
 
-  
-   
-
+function handleRegisert() {
+  navigation("/regisert.html");
+}

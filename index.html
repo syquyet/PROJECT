@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>projec_home</title>
+    <title>home</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -32,8 +32,11 @@
     <link rel="stylesheet" href="/css/banner.css" />
     <link rel="stylesheet" href="/css/product.css" />
     <link rel="stylesheet" href="/css/footer.css" />
-    
-   
+    <link rel="stylesheet" href="/css/product_detail.css" />
+    <style>
+      
+      
+    </style>
   </head>
   <body>
     <header>
@@ -44,21 +47,17 @@
           </li>
         </ul>
         <ul class="nav-container">
-          <li><a href="">TRANG CHỦ</a></li>
-          <li><a href=""> SẢN PHẨM </a></li>
+          <li><a href="/index.html">TRANG CHỦ</a></li>
+          <li><a href="/product.html"> SẢN PHẨM </a></li>
           <li><a href="">BỘ SƯU TẬP</a></li>
           <li><a href="" style="color: rgb(191, 88, 88)">KHUYẾN MÃI</a></li>
         </ul>
         <ul id="nav-right">
           <li>
-            <button>
-              <a href="">Đăng ký</a>
-            </button>
+            <button onclick="handleRegisert()">Đăng ký</button>
           </li>
           <li>
-            <button>
-              <a href="">Đăng nhập</a>
-            </button>
+            <button onclick="handleLogin()">Đăng nhập</button>
           </li>
           <li>
             <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
@@ -290,6 +289,142 @@
           <p>ĐỔI TRẢ HÀNG TRONG VÒNG 3 NGÀY</p>
         </div>
       </section>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Chi tiết sản phẩm
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+              
+            </div>
+            <div class="modal-body">
+              <section class="product_detail-container">
+                <section class="banner-product product_detail-banner">
+                  <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                      ></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img
+                          src="/image/anh sản phẩm 8.jpg"
+                          class="d-block"
+                          alt="..."
+                        />
+                      </div>
+                      <div class="carousel-item">
+                        <img
+                          src="/image/anh sản phẩm 7.jpg"
+                          class="d-block"
+                          alt="..."
+                        />
+                      </div>
+                      <div class="carousel-item">
+                        <img
+                          src="/image/anh sản phẩm 5.jpg"
+                          class="d-block"
+                          alt="..."
+                        />
+                      </div>
+                    </div>
+                    <button
+                      class="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      class="carousel-control-next"
+                      type="button"
+                      data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </section>
+                <section class="product_detail-content">
+                  <h4>Tên sản phẩm</h4>
+                  <h5>Giá: 100,000đ</h5>
+                  <p>Chọn size:</p>
+                  <div class="btn-size">
+                    <button>S</button><button>M</button><button>L</button
+                    ><button>XL</button><button>XXL</button>
+                  </div>
+                  <p>Chọn số lượng:</p>
+                  <div class="btn-quantity">
+                    <button class="btn-quantity-reduce">-</button><span>1</span
+                    ><button class="btn-quantity-add">+</button>
+                  </div>
+
+                  <div>
+                    <button class="btn-add-product_detail">
+                      Thêm vào giỏ hàng
+                    </button>
+
+                    <button class="product_detail-btn-buynow">Mua ngay</button>
+                    <button class="product_detail-btn-delete">xóa</button>
+                  </div>
+
+                  <h6>Mô tả sản phẩm</h6>
+                  <hr />
+                  Váy chân dài luôn có sức hút và vị trí riêng trong vô vàn sản
+                  phẩm thời trang cho nữ. Váy chân dài cũng mang đến một hình
+                  ảnh chỉnh chu, sang trọng và nữ tính quyến rũ.
+                </section>
+              </section>
+            </div>
+            <div class="modal-footer">
+              
+            </div>
+          
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <div class="container">
@@ -333,4 +468,6 @@
   <script src="/utils/method.js"></script>
   <script src="/utils/header.js"></script>
   <script src="/JS/product.js"></script>
+  <!-- <script src="/utils/database.js"></script> -->
+   
 </html>

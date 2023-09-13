@@ -52,6 +52,8 @@ function getUser() {
     phone: phoneElement.value,
     password: passwordElement.value,
     repeatPassword: repeatPasswordElement.value,
+    status: "active",
+    role:"user",
   };
 }
 // hàm kiểm tra lỗi user
@@ -89,7 +91,7 @@ function checkError(user) {
   }
   if(user.password.length<8){
     error.isError = true;
-    error.msgPassword = "*mật khẩu 8 ký tự trowe lên";
+    error.msgPassword = "*mật khẩu 8 ký tự trở lên";
   }
   if (user.password !== user.repeatPassword) {
     error.isError = true;
@@ -111,4 +113,7 @@ function readerError(error) {
   errorPhoneElement.textContent = error.msgPhone;
   errorPaswordlElememt.textContent = error.msgPassword;
   errorRepeatPassworddlElememt.textContent = error.msgRepeatPassword;
+}
+function handleLogin() {
+  navigation("/login.html");
 }
